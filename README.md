@@ -8,7 +8,7 @@ This is a library is perfect for small projects you are only sending a small amo
 
 ## Requirements
 
-You are required to have an SMTP server to send SMS. Google provides this for free including few other major email providers. You will need to look up or ask your provider to give you SMTP access to send messages.
+You are required to have an SMTP server to send SMS. Google provides this for free including few other major email providers. You will need to look up or ask your provider to give you SMTP access to send messages. **This library currently only supports major US wireless carriers**. If you would like to add one. Please make a PR request or open an issue!
 
 ## Install
 
