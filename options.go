@@ -1,8 +1,8 @@
-package github.com/ajm113/go-tinysms
+package tinysms
 
 // Options @TODO Write me!
 type Options struct {
-	Addr string
+	Addr     string
 	Username string
 	Password string
 }

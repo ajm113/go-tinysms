@@ -1,18 +1,13 @@
-package github.com/ajm113/go-tinysms
-
+package tinysms
 
 import (
-	"errors"
-	"fmt"
-	"gopkg.in/yaml.v1"
-	"io/ioutil"
 	"net/smtp"
-	"strings"
 )
 
 type (
+	// SMSClient Client object used to send SMS messages.
 	SMSClient struct {
-		options *Options
-		stmpClient *smtp.Client,
+		options    *Options
+		stmpClient *smtp.Client
 	}
 )
