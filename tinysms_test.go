@@ -6,12 +6,15 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestTinySMS(t *testing.T) {
-	e := NewClient(&Options{
-		Addr:     "localhost:1234",
-		Username: "test@email.com",
-		Password: "password",
-	})
+var options = &Options{
+	Addr:     "smtp.gmail.com:587",
+	Username: "tester@gmail.com",
+	Password: "testing",
+}
 
-	assert.NotNil(t, e)
+func TestTinySMS(t *testing.T) {
+	c := NewClient(options)
+
+	assert.NotNil(t, c)
+	assert.NotNil(t, c.Options)
 }

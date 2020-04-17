@@ -1,3 +1,6 @@
+
+all: fmt test
+
 .PHONY: fmt
 
 fmt:
