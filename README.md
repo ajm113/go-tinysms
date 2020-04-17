@@ -19,7 +19,6 @@ You are required to have an SMTP server to send SMS. Google provides this for fr
 ```
 import "github.com/ajm113/go-tinysms"
 
-//...
 func main() {
 	c := tinysms.NewClient(&tinysms.Options{
 		// SMTP Server and login settings.
@@ -35,6 +34,13 @@ func main() {
 	err := c.Send("5555555555", "AT&T", "tinysms Golang library is 1337!")
 }
 ```
+
+## This project wants help!
+Few things you can help improve the project!
+
+- Better carrier support of international carriers.
+- Improved documentation.
+- Better code coverage and unit tests.
 
 ## License
 
