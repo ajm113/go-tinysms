@@ -27,3 +27,16 @@ func TestSend(t *testing.T) {
 
 	assert.NotNil(t, err)
 }
+
+func TestSendErrors(t *testing.T) {
+	c := NewClient(options)
+
+	err := c.Send("5555555555", "error", "failed message!")
+
+	assert.NotNil(t, err)
+
+	c.Options.Addr = ":123"
+	err = c.Send("5555555555", "AT&T", "failed message!")
+
+	assert.NotNil(t, err)
+}
