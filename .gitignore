@@ -1,0 +1,5 @@
+coverage.txt
+.DS_Store
+.vscode
+.idea
+*.sw[op]
