@@ -1,4 +1,4 @@
-# go-tinysms
+# tinysms
 **Simple free SMS client using SMTP**
 
 [![codecov](https://codecov.io/gh/ajm113/go-tinysms/branch/master/graph/badge.svg)](https://codecov.io/gh/ajm113/go-tinysms)
@@ -9,6 +9,28 @@ This is a library is perfect for small projects you are only sending a small amo
 ## Install
 
 `go get github.com/ajm113/go-tinysms`
+
+## Usuage
+
+```
+import "github.com/ajm113/go-tinysms"
+
+//...
+func main() {
+	c := tinysms.NewClient(&tinysms.Options{
+		// SMTP Server and login settings.
+		Addr:        "smtp.gmail.com:587",
+		Username:    "tester@gmail.com",
+		Password:    "testing",
+
+		// How you want the from address to show on text messages.
+		FromAddress: "andrew@test.com",
+	})
+
+	// Send a text message to a phone using AT&T.
+	err := c.Send("5555555555", "AT&T", "tinysms Golang library is 1337!")
+}
+```
 
 ## License
 
