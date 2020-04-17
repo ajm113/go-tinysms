@@ -7,9 +7,10 @@ import (
 )
 
 var options = &Options{
-	Addr:     "smtp.gmail.com:587",
-	Username: "tester@gmail.com",
-	Password: "testing",
+	Addr:        "smtp.gmail.com:587",
+	Username:    "tester@gmail.com",
+	Password:    "testing",
+	FromAddress: "andrew@test.com",
 }
 
 func TestTinySMS(t *testing.T) {
@@ -17,4 +18,12 @@ func TestTinySMS(t *testing.T) {
 
 	assert.NotNil(t, c)
 	assert.NotNil(t, c.Options)
+}
+
+func TestSend(t *testing.T) {
+	c := NewClient(options)
+
+	err := c.Send("5555555555", "AT&T", "tinysms Golang Library is 1337!")
+
+	assert.NotNil(t, err)
 }
