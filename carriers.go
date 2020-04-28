@@ -14,4 +14,5 @@ var Carriers = map[string]string{
 	"virgin":        "vmobl.net",
 	"qwest":         "qwestmp.com",
 	"nextel":        "messaging.nextel.com",
+	"vodacom":        "voda.co.za",
 }
